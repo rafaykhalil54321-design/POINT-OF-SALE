@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple POS System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🧾 Point of Sale (POS)</h1>
+
+<!-- Add Product -->
+<div class="box">
+    <h2>Add Product</h2>
+    <input type="text" id="pname" placeholder="Product Name">
+    <input type="number" id="pprice" placeholder="Price">
+    <input type="number" id="pstock" placeholder="Stock">
+    <button onclick="addProduct()">Add Product</button>
+</div>
+
+<!-- Product List -->
+<div class="box">
+    <h2>Products</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="productList"></tbody>
+    </table>
+</div>
+
+<!-- Cart -->
+<div class="box">
+    <h2>Cart</h2>
+    <ul id="cartItems"></ul>
+    <h3>Total: $<span id="total">0</span></h3>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
